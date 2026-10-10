@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -30,6 +31,7 @@ export default function Navbar() {
       </a>
 
       <nav
+        id="main-navigation"
         className={`desktop-nav ${menuOpen ? "mobile-nav-open" : ""}`}
         aria-label="Main navigation"
       >
@@ -57,7 +59,8 @@ export default function Navbar() {
         className="mobile-menu-toggle"
         aria-label={menuOpen ? "Close menu" : "Open menu"}
         aria-expanded={menuOpen}
-        onClick={() => setMenuOpen(!menuOpen)}
+        aria-controls="main-navigation"
+        onClick={() => setMenuOpen((open) => !open)}
       >
         {menuOpen ? "✕" : "☰"}
       </button>
