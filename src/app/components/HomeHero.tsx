@@ -6,15 +6,14 @@ export default function HomeHero() {
     <section
       id="home"
       className="hero"
-      style={{ backgroundImage: `url("${heroImage}")` }}
+      aria-label="Zammaya premium lounge bar in South Delhi"
+      style={{
+        backgroundImage: `url("${heroImage}")`,
+      }}
     >
       <div className="hero-overlay" />
 
       <div className="hero-content">
-        <p className="eyebrow">
-          AN IMMERSIVE DINING & LOUNGE EXPERIENCE
-        </p>
-
         <h1>
           A Promise to
           <br />
@@ -23,23 +22,48 @@ export default function HomeHero() {
 
         <div className="gold-rule" />
 
+        <h2>
+          Zammaya - Premium Lounge Bar in South Delhi
+        </h2>
+
         <p className="hero-description">
-          Where extraordinary flavours, atmospheric interiors
-          and unforgettable moments come together.
+          Where elevated dining, crafted cocktails, immersive
+          ambience, and unforgettable energy come together.
         </p>
 
-        <p className="hero-note">
-          AN EXPERIENCE DESIGNED TO BE REMEMBERED
+        <p className="hero-description">
+          Located on Sri Aurobindo Marg in Adchini, Zammaya is
+          your destination for flavour-filled evenings,
+          meaningful conversations, celebratory dinners, and
+          nights that stay with you long after the music fades.
         </p>
 
-        <a href="#experience" className="gold-button">
-          EXPLORE THE EXPERIENCE
-        </a>
+        <div className="hero-actions">
+          <a
+            href="#reservation"
+            className="gold-button"
+            aria-label="Reserve your table at Zammaya"
+          >
+            RESERVE YOUR TABLE
+          </a>
+
+          <a
+            href="#experience"
+            className="hero-secondary-button"
+          >
+            EXPLORE THE EXPERIENCE
+          </a>
+        </div>
       </div>
 
       <div className="hero-bottom">
-        <span>DINING · COCKTAILS · EXPERIENCES</span>
-        <a href="#experience">SCROLL TO DISCOVER ↓</a>
+        <span>
+          81, SRI AUROBINDO MARG, ADCHINI, SOUTH DELHI
+        </span>
+
+        <a href="#experience">
+          SCROLL TO DISCOVER ↓
+        </a>
       </div>
     </section>
   );
