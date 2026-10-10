@@ -7,7 +7,7 @@ import ExperienceSection from "./components/ExperienceSection";
 import DiningSection from "./components/DiningSection";
 import CocktailsSection from "./components/CocktailsSection";
 import Escape from "./components/Escape";
-import OccasionSection from "./components/OccasionSection";
+import OccasionsSection from "./components/OccasionsSection";
 import LocationSection from "./components/LocationSection";
 import FAQSection from "./components/FAQSection";
 
@@ -33,7 +33,7 @@ export default function Home() {
       <DiningSection />
       <CocktailsSection />
       <Escape />
-      <OccasionSection />
+      <OccasionsSection />
       <LocationSection />
       <FAQSection />
     </main>
