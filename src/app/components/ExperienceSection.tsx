@@ -5,12 +5,10 @@ export default function ExperienceSection() {
       className="experience-section"
       aria-labelledby="experience-heading"
     >
-      <div className="experience-visual">
-        <img
-          src="/experience.jpg"
-          alt="Zammaya lounge and dining experience in Adchini, South Delhi"
-          loading="lazy"
-        />
+      <img src="/experience-interior.jpg" 
+        alt="Zammaya lounge and dining 
+        ambience in Adchini, South Delhi" 
+        loading="lazy" />
 
         <span className="image-caption">
           AN EXPERIENCE BEYOND DINING
