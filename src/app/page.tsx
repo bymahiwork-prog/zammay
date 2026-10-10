@@ -1,7 +1,7 @@
-import Hero from "./app/components/Hero";
-import Experience from "./app/components/Experience";
-import SipSafari from "./app/components/SipSafari";
-import Escape from "./app/components/Escape";
+import Hero from "./components/Hero";
+import Experience from "./components/Experience";
+import SipSafari from "./components/SipSafari";
+import Escape from "./components/Escape";
 
 export default function Home() {
   return (
