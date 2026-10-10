@@ -5,10 +5,12 @@ export default function ExperienceSection() {
       className="experience-section"
       aria-labelledby="experience-heading"
     >
-      <img src="/experience-interior.jpg" 
-        alt="Zammaya lounge and dining 
-        ambience in Adchini, South Delhi" 
-        loading="lazy" />
+      <div className="experience-visual">
+        <img
+          src="/experience-interior.jpg"
+          alt="Zammaya lounge and dining ambience in Adchini, South Delhi"
+          loading="lazy"
+        />
 
         <span className="image-caption">
           AN EXPERIENCE BEYOND DINING
@@ -50,7 +52,11 @@ export default function ExperienceSection() {
           has a mood of its own.
         </p>
 
-        <a href="#reservation" className="experience-link">
+        <a
+          href="#reservation"
+          className="experience-link"
+          aria-label="Book your experience at Zammaya"
+        >
           BOOK YOUR EXPERIENCE <span>↗</span>
         </a>
       </div>
