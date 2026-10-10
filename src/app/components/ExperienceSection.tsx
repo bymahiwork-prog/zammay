@@ -1,60 +1,60 @@
-
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="experience-section">
+    <section
+      id="experience"
+      className="experience-section"
+      aria-labelledby="experience-heading"
+    >
       <div className="experience-visual">
         <img
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85"
-          alt="Elegant restaurant interior"
+          src="/experience.jpg"
+          alt="Zammaya lounge and dining experience in Adchini, South Delhi"
+          loading="lazy"
         />
+
         <span className="image-caption">
-          AN ATMOSPHERE BEYOND ORDINARY
+          AN EXPERIENCE BEYOND DINING
         </span>
       </div>
 
       <div className="experience-copy">
         <p className="experience-label">
-          THE ZAMMAY EXPERIENCE
+          THE ZAMMAYA EXPERIENCE
         </p>
 
-        <h2>
-          More Than a Place.
+        <h2 id="experience-heading">
+          An Experience
           <br />
-          <em>A Feeling.</em>
+          <em>Beyond Dining</em>
         </h2>
 
         <div className="experience-rule" />
 
         <p className="experience-description">
-          Some evenings are simply different. At Zammay,
-          every detail is thoughtfully curated — from the
-          atmosphere that welcomes you to the flavours that
-          surprise you and the moments that stay with you
-          long after the night ends.
+          At Zammaya, every visit is designed to feel like an
+          occasion.
         </p>
 
-        <p className="experience-tagline">
-          Come for the experience. Stay for the feeling.
+        <p className="experience-description">
+          Come in for a relaxed dinner, stay for the cocktails,
+          lose track of time with the music, or celebrate the
+          people who matter most. From intimate date nights
+          and stylish group dinners to birthday celebrations
+          and vibrant evenings with friends, Zammaya brings
+          together food, drinks, ambience, and energy in one
+          memorable setting.
         </p>
 
-        <a href="#dining" className="experience-link">
-          DISCOVER OUR WORLD <span>↗</span>
+        <p className="experience-description">
+          We are more than a place to dine. We are a premium
+          lounge bar in South Delhi where every table has a
+          story, every cocktail has character, and every night
+          has a mood of its own.
+        </p>
+
+        <a href="#reservation" className="experience-link">
+          BOOK YOUR EXPERIENCE <span>↗</span>
         </a>
-
-        <div className="experience-features">
-          <div>
-            <span>01</span>
-            <p>THOUGHTFUL<br />AMBIENCE</p>
-          </div>
-          <div>
-            <span>02</span>
-            <p>CURATED<br />FLAVOURS</p>
-          </div>
-          <div>
-            <span>03</span>
-            <p>LASTING<br />MOMENTS</p>
-          </div>
-        </div>
       </div>
     </section>
   );
