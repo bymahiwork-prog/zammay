@@ -3,22 +3,22 @@
 
 import { useState } from "react";
 
+const links = [
+  { label: "HOME", href: "/" },
+  { label: "ABOUT US", href: "/about" },
+  { label: "GALLERY", href: "/gallery" },
+  { label: "FRANCHISE", href: "/franchise" },
+  { label: "BLOG", href: "/blog" },
+  { label: "CONTACT US", href: "/contact" },
+];
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const links = [
-    { label: "HOME", href: "#home" },
-    { label: "THE EXPERIENCE", href: "#experience" },
-    { label: "DINING", href: "#dining" },
-    { label: "COCKTAILS", href: "#cocktails" },
-    { label: "PRIVATE EVENTS", href: "#events" },
-    { label: "LOCATION", href: "#location" },
-  ];
 
   return (
     <header className="site-header">
       <a
-        href="#home"
+        href="/"
         className="brand"
         aria-label="Zammaya home"
         onClick={() => setMenuOpen(false)}
@@ -47,7 +47,7 @@ export default function Navbar() {
       </nav>
 
       <a
-        href="#reservation"
+        href="/contact#reservation"
         className="gold-button header-button"
         onClick={() => setMenuOpen(false)}
       >
