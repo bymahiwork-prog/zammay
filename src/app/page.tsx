@@ -1,14 +1,12 @@
-import Hero from "./components/Hero";
-import Experience from "./components/Experience";
-import SipSafari from "./components/SipSafari";
+import HomeHero from "./components/HomeHero";
+import ExperienceSection from "./components/ExperienceSection";
 import Escape from "./components/Escape";
 
 export default function Home() {
   return (
     <main style={{ background: "#0B0D0B" }}>
-      <Hero />
-      <Experience />
-      <SipSafari />
+      <HomeHero />
+      <ExperienceSection />
       <Escape />
     </main>
   );
