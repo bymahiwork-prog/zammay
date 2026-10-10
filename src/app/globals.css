@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap');
 
 @import "tailwindcss";
@@ -8,6 +9,7 @@
   --gold: #C6A45B;
   --ivory: #E8E0D0;
   --muted: #AAA89D;
+  --line: rgba(198, 164, 91, 0.25);
 }
 
 * {
@@ -16,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -24,7 +27,15 @@ body {
   color: var(--ivory);
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 a {
@@ -32,8 +43,18 @@ a {
   text-decoration: none;
 }
 
+button {
+  font: inherit;
+}
+
+section {
+  position: relative;
+}
+
+/* HEADER */
+
 .site-header {
-  height: 74px;
+  min-height: 74px;
   padding: 0 5.2%;
   display: flex;
   align-items: center;
@@ -104,31 +125,44 @@ a {
   white-space: nowrap;
 }
 
+/* HERO */
+
 .hero {
   min-height: 640px;
   height: min(760px, calc(100svh - 74px));
   position: relative;
   display: flex;
   align-items: center;
+  isolation: isolate;
   background-size: cover;
   background-position: center 55%;
   overflow: hidden;
 }
 
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  z-index: -2;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: -1;
   background:
-    linear-gradient(90deg, rgba(5, 8, 5, 0.91) 0%,
-      rgba(5, 8, 5, 0.72) 38%,
-      rgba(5, 8, 5, 0.14) 100%),
+    linear-gradient(90deg, rgba(5, 8, 5, 0.91) 0%, rgba(5, 8, 5, 0.72) 38%, rgba(5, 8, 5, 0.14) 100%),
     linear-gradient(0deg, rgba(5, 8, 5, 0.7), transparent 40%);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 820px;
+  width: 100%;
+  max-width: 1000px;
   padding: 70px 8%;
 }
 
@@ -145,7 +179,7 @@ a {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 400;
   font-size: clamp(48px, 6.3vw, 91px);
-  line-height: 0.93;
+  line-height: 0.98;
   letter-spacing: -0.035em;
 }
 
@@ -187,6 +221,595 @@ a {
   color: #D4C9B3;
 }
 
+/* SHARED SECTION TYPOGRAPHY */
+
+.experience-label,
+.cocktails-eyebrow,
+.occasions-eyebrow,
+.location-eyebrow,
+.faq-eyebrow {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  line-height: 1.8;
+  margin: 0 0 17px;
+}
+
+.experience-copy h2,
+.dining-content h2,
+.cocktails-content h2,
+.escape-heading,
+.occasions-content h2,
+.location-content h2,
+.faq-heading h2,
+.final-cta h2 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.03;
+  letter-spacing: -0.025em;
+}
+
+.experience-copy h2 em,
+.dining-content h2 em,
+.cocktails-content h2 em,
+.escape-heading em,
+.occasions-content h2 em,
+.location-content h2 em,
+.faq-heading h2 em,
+.final-cta h2 em {
+  color: var(--ivory);
+  font-weight: 400;
+}
+
+.experience-rule,
+.dining-rule,
+.cocktails-rule,
+.occasions-rule,
+.location-rule {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 23px 0;
+}
+
+.experience-description,
+.dining-description,
+.cocktails-description,
+.occasions-description,
+.location-description {
+  color: #BDB9AD;
+  font-size: 12px;
+  line-height: 2;
+  margin: 0 0 15px;
+}
+
+.experience-link,
+.dining-button,
+.cocktails-button,
+.occasions-button,
+.location-button,
+.location-button-secondary,
+.escape-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-height: 40px;
+  padding: 0 17px;
+  border: 1px solid var(--line);
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.experience-link:hover,
+.dining-button:hover,
+.cocktails-button:hover,
+.occasions-button:hover,
+.location-button:hover,
+.location-button-secondary:hover,
+.escape-link:hover {
+  background: var(--gold);
+  color: var(--background);
+  border-color: var(--gold);
+}
+
+/* EXPERIENCE */
+
+.experience-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(35px, 7vw, 100px);
+  padding: 95px 5.2%;
+  background: var(--background);
+}
+
+.experience-visual {
+  position: relative;
+  min-width: 0;
+  height: clamp(300px, 39vw, 510px);
+  overflow: hidden;
+}
+
+.experience-visual img {
+  object-position: center;
+}
+
+.image-caption {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  color: white;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  text-shadow: 0 1px 8px #000;
+}
+
+.experience-copy {
+  max-width: 510px;
+  padding: 15px 0;
+}
+
+.experience-copy h2 {
+  margin-bottom: 0;
+}
+
+.experience-link {
+  margin-top: 10px;
+}
+
+/* DINING */
+
+.dining-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(35px, 6vw, 85px);
+  padding: 85px 5.2%;
+  background: var(--forest);
+}
+
+.dining-gallery {
+  display: grid;
+  grid-template-columns: 1fr 0.72fr;
+  grid-template-rows: repeat(2, minmax(120px, 190px));
+  gap: 12px;
+  min-width: 0;
+}
+
+.dining-gallery img {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.dining-gallery img:first-child {
+  grid-row: 1 / 3;
+}
+
+.dining-content {
+  max-width: 470px;
+}
+
+.dining-content h2 {
+  margin-bottom: 12px;
+}
+
+.dining-subheading,
+.cocktails-subheading,
+.occasions-subheading,
+.location-subheading {
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.4;
+  margin: 12px 0 0;
+}
+
+.dining-button {
+  margin-top: 10px;
+}
+
+/* COCKTAILS */
+
+.cocktails-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(35px, 7vw, 100px);
+  padding: 90px 5.2%;
+  background: var(--background);
+}
+
+.cocktails-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  min-width: 0;
+}
+
+.cocktails-image {
+  height: clamp(250px, 32vw, 430px);
+  margin: 0;
+  overflow: hidden;
+}
+
+.cocktails-image + .cocktails-image {
+  display: none;
+}
+
+.cocktails-content {
+  max-width: 490px;
+}
+
+.cocktails-content h2 {
+  margin-bottom: 10px;
+}
+
+.cocktails-intro {
+  color: var(--ivory);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 21px;
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+.cocktails-button {
+  margin-top: 10px;
+}
+
+/* ESCAPE */
+
+.escape-section {
+  padding: 75px 5.2% 90px;
+  background: var(--background);
+}
+
+.escape-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 32px;
+}
+
+.escape-content {
+  max-width: 660px;
+}
+
+.escape-eyebrow {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  margin: 0 0 15px;
+}
+
+.escape-heading {
+  max-width: 650px;
+}
+
+.escape-text {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 16px 0 0;
+}
+
+.escape-link {
+  flex-shrink: 0;
+  margin-bottom: 3px;
+}
+
+.escape-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.escape-placeholder {
+  height: clamp(140px, 19vw, 245px);
+  overflow: hidden;
+  background: var(--forest);
+  color: var(--muted);
+}
+
+/* OCCASIONS */
+
+.occasions-section {
+  padding: 90px 5.2%;
+  text-align: center;
+  background: #11140F;
+}
+
+.occasions-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.occasions-content h2 {
+  margin-bottom: 12px;
+}
+
+.occasions-subheading {
+  margin-top: 0;
+}
+
+.occasions-rule {
+  margin: 24px auto;
+}
+
+.occasions-description {
+  max-width: 680px;
+  margin: 0 auto 15px;
+}
+
+.occasions-list-heading {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  margin: 30px 0 15px;
+}
+
+.occasions-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin: 0 auto 28px;
+  padding: 0;
+}
+
+.occasions-list li {
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  color: #D0C9BA;
+  font-size: 10px;
+}
+
+.occasions-list li span {
+  color: var(--gold);
+  margin-right: 7px;
+}
+
+.occasions-button {
+  background: var(--gold);
+  color: var(--background);
+  border-color: var(--gold);
+}
+
+.occasions-button:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+/* LOCATION */
+
+.location-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(35px, 7vw, 95px);
+  padding: 90px 5.2%;
+  background: var(--background);
+}
+
+.location-content {
+  max-width: 520px;
+}
+
+.location-content h2 {
+  margin-bottom: 10px;
+}
+
+.location-subheading {
+  margin-top: 0;
+}
+
+.location-details {
+  margin: 25px 0;
+}
+
+.location-details p {
+  color: #D0C9BA;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0 0 18px;
+}
+
+.location-label {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+.location-details a {
+  transition: color 0.2s ease;
+}
+
+.location-details a:hover {
+  color: var(--gold);
+}
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.location-image {
+  min-height: 300px;
+  height: clamp(300px, 34vw, 450px);
+  overflow: hidden;
+  background: var(--forest);
+}
+
+/* FAQ */
+
+.faq-section {
+  padding: 80px 5.2% 90px;
+  background: var(--forest);
+}
+
+.faq-heading {
+  max-width: 680px;
+  margin: 0 auto 35px;
+  text-align: center;
+}
+
+.faq-heading h2 {
+  margin-bottom: 15px;
+}
+
+.faq-heading > p:last-child {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.faq-list {
+  max-width: 850px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-question {
+  display: flex;
+  width: 100%;
+  min-height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 0;
+  border: 0;
+  background: transparent;
+  color: var(--ivory);
+  text-align: left;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  color: var(--gold);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+}
+
+.faq-answer {
+  padding: 0 35px 18px 0;
+}
+
+.faq-answer p {
+  max-width: 720px;
+  color: #C0C0B5;
+  font-size: 12px;
+  line-height: 2;
+  margin: 0;
+}
+
+/* FINAL CTA - applies when the component uses these class names */
+
+.final-cta {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 5.2%;
+  text-align: center;
+  background:
+    linear-gradient(rgba(5, 8, 5, 0.65), rgba(5, 8, 5, 0.78)),
+    var(--forest);
+  background-position: center;
+  background-size: cover;
+}
+
+.final-cta-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.final-cta h2 {
+  margin-bottom: 20px;
+}
+
+.final-cta p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  color: #D0C9BA;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.final-cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* FOOTER */
+
+.site-footer {
+  padding: 55px 5.2% 25px;
+  background: #060706;
+  border-top: 1px solid rgba(198, 164, 91, 0.15);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 35px;
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 26px;
+  letter-spacing: 0.15em;
+}
+
+.footer-heading {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  margin: 0 0 15px;
+}
+
+.footer-column a,
+.footer-column p {
+  display: block;
+  color: #B8B5AA;
+  font-size: 11px;
+  line-height: 2;
+  margin: 0 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.footer-column a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(198, 164, 91, 0.15);
+  color: var(--muted);
+  font-size: 9px;
+}
+
+/* TABLET */
+
 @media (max-width: 1000px) {
   .desktop-nav {
     gap: 13px;
@@ -199,11 +822,28 @@ a {
   .header-button {
     padding: 0 10px;
   }
+
+  .experience-section,
+  .dining-section,
+  .cocktails-section,
+  .location-section {
+    gap: 35px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
+/* MOBILE */
+
 @media (max-width: 700px) {
+  body {
+    font-size: 12px;
+  }
+
   .site-header {
-    height: 64px;
+    min-height: 64px;
     padding: 0 5%;
   }
 
@@ -217,6 +857,7 @@ a {
 
   .header-button {
     min-height: 34px;
+    padding: 0 10px;
     font-size: 8px;
   }
 
@@ -226,6 +867,10 @@ a {
     background-position: 58% center;
   }
 
+  .hero-video {
+    object-position: 58% center;
+  }
+
   .hero-overlay {
     background:
       linear-gradient(90deg, rgba(5, 8, 5, 0.84), rgba(5, 8, 5, 0.35)),
@@ -233,7 +878,7 @@ a {
   }
 
   .hero-content {
-    padding: 50px 6%;
+    padding: 45px 6%;
   }
 
   .hero h1 {
@@ -251,38 +896,134 @@ a {
     font-size: 7px;
     letter-spacing: 0.08em;
   }
-  
-/* Hero video background */
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 55%;
-  z-index: 0;
-}
 
-/* Keep the overlay above the video */
-.hero-overlay {
-  z-index: 0;
-}
+  .experience-section,
+  .dining-section,
+  .cocktails-section,
+  .location-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 60px 6%;
+  }
 
-/* Keep hero text above the video and overlay */
-.hero-content,
-.hero-bottom {
-  z-index: 1;
-}
+  .experience-visual {
+    height: 300px;
+  }
 
-/* Ensure the hero fills its container */
-.hero {
-  isolation: isolate;
-}
+  .experience-copy {
+    padding: 0;
+  }
 
-/* Mobile video positioning */
-@media (max-width: 700px) {
-  .hero-video {
-    object-position: 58% center;
+  .experience-copy h2,
+  .dining-content h2,
+  .cocktails-content h2,
+  .escape-heading,
+  .occasions-content h2,
+  .location-content h2,
+  .faq-heading h2,
+  .final-cta h2 {
+    font-size: clamp(34px, 9vw, 45px);
+  }
+
+  .dining-gallery {
+    grid-template-rows: repeat(2, minmax(100px, 150px));
+    gap: 8px;
+  }
+
+  .cocktails-image {
+    height: 280px;
+  }
+
+  .escape-section {
+    padding: 60px 6%;
+  }
+
+  .escape-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 24px;
+  }
+
+  .escape-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .escape-placeholder {
+    height: 155px;
+  }
+
+  .occasions-section {
+    padding: 65px 6%;
+  }
+
+  .occasions-list {
+    gap: 8px;
+  }
+
+  .occasions-list li {
+    font-size: 9px;
+    padding: 7px 9px;
+  }
+
+  .location-image {
+    min-height: 260px;
+    height: 280px;
+  }
+
+  .location-actions {
+    align-items: stretch;
+  }
+
+  .location-button,
+  .location-button-secondary {
+    flex: 1 1 140px;
+  }
+
+  .faq-section {
+    padding: 60px 6%;
+  }
+
+  .faq-question {
+    font-size: 17px;
+  }
+
+  .final-cta {
+    min-height: 300px;
+    padding: 60px 6%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+  }
+
+  .site-footer {
+    padding: 45px 6% 22px;
+  }
+
+  .footer-bottom {
+    margin-top: 28px;
   }
 }
-}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-bottom {
+    font-size: 6px;
+  }
+
+  .escape-placeholder {
+    height: 125px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  }
