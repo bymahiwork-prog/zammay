@@ -92,7 +92,7 @@ export default function Footer() {
 
           <div className="zm-footer-bottom">
             <p>
-              © {new Date().getFullYear()} Zammaya. All rights reserved.
+              © 2026 Zammaya. All rights reserved.
             </p>
 
             <a href="#top" className="zm-footer-back-top">
