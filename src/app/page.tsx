@@ -8,6 +8,7 @@ import CocktailsSection from "./components/CocktailsSection";
 import Escape from "./components/Escape";
 import OccasionsSection from "./components/OccasionsSection";
 import LocationSection from "./components/LocationSection";
+import MovingTicker from "./components/MovingTicker";
 import FAQSection from "./components/FAQSection";
 import FinalCTASection from "./components/FinalCTASection";
 import Footer from "./components/Footer";
@@ -51,6 +52,8 @@ export default function Home() {
         <OccasionsSection />
 
         <LocationSection />
+
+        <MovingTicker />
 
         <FAQSection />
 
