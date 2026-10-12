@@ -25,7 +25,7 @@ export default function LocationSection() {
         .zm-location-eyebrow {
           margin: 0 0 18px;
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.23em;
           line-height: 1.8;
@@ -34,7 +34,7 @@ export default function LocationSection() {
         .zm-location-heading {
           margin: 0;
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(42px, 4.8vw, 64px);
           font-weight: 400;
           line-height: 1.06;
@@ -49,7 +49,7 @@ export default function LocationSection() {
         .zm-location-subheading {
           margin: 18px 0 0;
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(21px, 2.2vw, 27px);
           font-weight: 400;
           line-height: 1.45;
@@ -90,7 +90,7 @@ export default function LocationSection() {
           display: inline-block;
           margin-bottom: 8px;
           color: #C6A45B;
-          font-size: 9px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.2em;
           line-height: 1.8;
@@ -123,7 +123,7 @@ export default function LocationSection() {
           padding: 0 20px;
           background: #C6A45B;
           color: #080A08;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.12em;
           text-decoration: none;
@@ -139,7 +139,7 @@ export default function LocationSection() {
           align-items: center;
           min-height: 44px;
           color: #E8E0D0;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.12em;
           text-decoration: none;
@@ -203,7 +203,7 @@ export default function LocationSection() {
 
           .zm-location-eyebrow {
             margin-bottom: 14px;
-            font-size: 9px;
+            font-size: 11px;
             letter-spacing: 0.19em;
           }
 

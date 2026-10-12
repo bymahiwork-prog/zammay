@@ -60,7 +60,7 @@ export default function OccasionsSection() {
         .zm-occasions-eyebrow {
           margin: 0 0 18px;
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.23em;
           line-height: 1.8;
@@ -69,7 +69,7 @@ export default function OccasionsSection() {
         .zm-occasions-heading {
           margin: 0;
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(42px, 4.8vw, 64px);
           font-weight: 400;
           line-height: 1.06;
@@ -84,7 +84,7 @@ export default function OccasionsSection() {
         .zm-occasions-subheading {
           margin: 18px 0 0;
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(20px, 2.2vw, 26px);
           font-weight: 400;
           line-height: 1.45;
@@ -107,7 +107,7 @@ export default function OccasionsSection() {
         .zm-occasions-list-heading {
           margin: 26px 0 16px;
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.2em;
           line-height: 1.8;
@@ -147,7 +147,7 @@ export default function OccasionsSection() {
           padding: 13px 0;
           border-bottom: 1px solid rgba(198, 164, 91, 0.6);
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.13em;
           line-height: 1.8;
@@ -196,7 +196,7 @@ export default function OccasionsSection() {
 
           .zm-occasions-eyebrow {
             margin-bottom: 14px;
-            font-size: 9px;
+            font-size: 11px;
             letter-spacing: 0.19em;
           }
 

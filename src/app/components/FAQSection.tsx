@@ -119,7 +119,7 @@ export default function FAQSection() {
         .zm-faq-eyebrow {
           margin: 0 0 18px;
           color: #c6a45b;
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 11px;
           font-weight: 600;
           letter-spacing: 3.5px;
@@ -129,7 +129,7 @@ export default function FAQSection() {
         .zm-faq-heading h2 {
           margin: 0;
           color: #e8e0d0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(36px, 5vw, 58px);
           font-weight: 400;
           line-height: 1.12;
@@ -145,7 +145,7 @@ export default function FAQSection() {
           max-width: 560px;
           margin: 20px auto 0;
           color: rgba(232, 224, 208, 0.7);
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 14px;
           line-height: 1.9;
         }
@@ -171,7 +171,7 @@ export default function FAQSection() {
           background: transparent;
           color: #e8e0d0;
           text-align: left;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(19px, 2.2vw, 24px);
           font-weight: 400;
           line-height: 1.45;
@@ -198,7 +198,7 @@ export default function FAQSection() {
           border: 1px solid rgba(198, 164, 91, 0.55);
           border-radius: 50%;
           color: #c6a45b;
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 20px;
           font-weight: 300;
           line-height: 1;
@@ -218,7 +218,7 @@ export default function FAQSection() {
         .zm-faq-answer p {
           margin: 0;
           color: rgba(232, 224, 208, 0.72);
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 14px;
           line-height: 1.95;
         }
@@ -245,7 +245,7 @@ export default function FAQSection() {
 
           .zm-faq-eyebrow {
             margin-bottom: 14px;
-            font-size: 10px;
+            font-size: 11px;
             letter-spacing: 3px;
           }
 

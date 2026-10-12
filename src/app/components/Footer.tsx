@@ -146,7 +146,7 @@ export default function Footer() {
         .zm-footer-tagline {
           margin: 20px 0 12px;
           color: #c6a45b;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: 23px;
           font-style: italic;
           line-height: 1.4;
@@ -156,7 +156,7 @@ export default function Footer() {
         .zm-footer-reserve p {
           margin: 0;
           color: rgba(232, 224, 208, 0.68);
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 13px;
           line-height: 1.9;
         }
@@ -164,7 +164,7 @@ export default function Footer() {
         .zm-footer-column h3 {
           margin: 4px 0 22px;
           color: #c6a45b;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: 23px;
           font-weight: 400;
           line-height: 1.3;
@@ -180,7 +180,7 @@ export default function Footer() {
         .zm-footer-column a,
         .zm-footer-column address {
           color: rgba(232, 224, 208, 0.75);
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 12px;
           font-style: normal;
           line-height: 1.9;
@@ -217,7 +217,7 @@ export default function Footer() {
           border: 1px solid #c6a45b;
           background: #c6a45b;
           color: #080a08 !important;
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 11px !important;
           font-weight: 600;
           text-align: center;
@@ -243,7 +243,7 @@ export default function Footer() {
         .zm-footer-back-top {
           margin: 0;
           color: rgba(232, 224, 208, 0.55);
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 11px;
           line-height: 1.8;
           text-decoration: none;

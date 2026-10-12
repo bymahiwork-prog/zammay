@@ -69,7 +69,7 @@ export default function CocktailsSection() {
         .zm-cocktails-eyebrow {
           margin: 0 0 16px;
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 2.5px;
           line-height: 1.6;
@@ -78,7 +78,7 @@ export default function CocktailsSection() {
         .zm-cocktails-heading {
           margin: 0 0 22px;
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(36px, 4.2vw, 56px);
           font-weight: 400;
           line-height: 1.1;
@@ -100,7 +100,7 @@ export default function CocktailsSection() {
         .zm-cocktails-intro {
           margin: 0 0 16px;
           color: #C6A45B;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: 22px;
           line-height: 1.5;
         }
@@ -120,7 +120,7 @@ export default function CocktailsSection() {
           padding: 13px 0;
           border-bottom: 1px solid rgba(198, 164, 91, 0.55);
           color: #E8E0D0;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 1.2px;
           text-decoration: none;

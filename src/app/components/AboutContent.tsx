@@ -59,7 +59,7 @@ export default function AboutContent() {
           width: 100%;
           background: #080a08;
           color: #e8e0d0;
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
         }
 
         .zm-about *,
@@ -77,18 +77,41 @@ export default function AboutContent() {
         }
 
         .zm-about-eyebrow {
+          display: inline-flex;
+          align-items: center;
+          gap: 14px;
           margin: 0;
           color: #c6a45b;
-          font-size: 10px;
+          font-size: 11px;
           letter-spacing: 0.32em;
           text-transform: uppercase;
+        }
+
+        .zm-about-eyebrow::before {
+          content: "";
+          width: 32px;
+          height: 1px;
+          background: currentColor;
+          opacity: 0.7;
+        }
+
+        .zm-about-intro .zm-about-eyebrow::after {
+          content: "";
+          width: 32px;
+          height: 1px;
+          background: currentColor;
+          opacity: 0.7;
+        }
+
+        .zm-about-promise .zm-about-eyebrow::before {
+          display: none;
         }
 
         .zm-about-h1,
         .zm-about-h2,
         .zm-about-h3,
         .zm-about-serif {
-          font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-weight: 400;
         }
 
@@ -177,6 +200,17 @@ export default function AboutContent() {
 
         .zm-about-hero-visual {
           position: relative;
+          isolation: isolate;
+        }
+
+        .zm-about-hero-visual::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          transform: translate(18px, -18px);
+          border: 1px solid rgba(198, 164, 91, 0.45);
+          pointer-events: none;
         }
 
         .zm-about-hero-visual img {
@@ -371,7 +405,7 @@ export default function AboutContent() {
           content: counter(reason, decimal-leading-zero);
           flex: 0 0 auto;
           color: #c6a45b;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: 18px;
         }
 
@@ -490,8 +524,8 @@ export default function AboutContent() {
 
         <div className="zm-about-hero-visual">
           <img
-            src="/experience-interior.jpg"
-            alt="Interior of Zammaya lounge bar in Adchini, South Delhi"
+            src="/lounge-interior.jpg"
+            alt="Lounge seating at Zammaya, a premium lounge bar in Adchini, South Delhi"
           />
           <div className="zm-about-promise">
             <p className="zm-about-eyebrow">Za·ma·ya</p>
@@ -551,12 +585,12 @@ export default function AboutContent() {
       >
         <div className="zm-about-photos">
           <img
-            src="/lounge-interior.jpg"
-            alt="Lounge seating at Zammaya"
+            src="/cocktails-signature.jpg"
+            alt="Signature cocktail at Zammaya"
           />
           <img
-            src="/cocktails-bar.jpg"
-            alt="Cocktail bar at Zammaya"
+            src="/dining-signature.jpg"
+            alt="Signature dish at Zammaya"
           />
         </div>
 

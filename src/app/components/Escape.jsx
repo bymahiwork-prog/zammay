@@ -48,7 +48,7 @@ export default function Escape() {
         .zm-escape-eyebrow {
           margin: 0 0 18px;
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.24em;
           line-height: 1.8;
@@ -58,7 +58,7 @@ export default function Escape() {
           max-width: 760px;
           margin: 0 0 24px;
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(40px, 5vw, 66px);
           font-weight: 400;
           line-height: 1.06;
@@ -87,7 +87,7 @@ export default function Escape() {
           padding: 12px 0;
           border-bottom: 1px solid rgba(198, 164, 91, 0.6);
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.13em;
           line-height: 1.8;
@@ -174,7 +174,7 @@ export default function Escape() {
 
           .zm-escape-eyebrow {
             margin-bottom: 14px;
-            font-size: 9px;
+            font-size: 11px;
             letter-spacing: 0.19em;
           }
 

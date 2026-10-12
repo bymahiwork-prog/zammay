@@ -44,7 +44,7 @@ export default function DiningSection() {
         .zm-dining-eyebrow {
           margin: 0 0 20px;
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.24em;
           line-height: 1.8;
@@ -53,7 +53,7 @@ export default function DiningSection() {
         .zm-dining-heading {
           margin: 0;
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(42px, 5vw, 68px);
           font-weight: 400;
           line-height: 1.04;
@@ -68,7 +68,7 @@ export default function DiningSection() {
         .zm-dining-subheading {
           margin: 20px 0 0;
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(20px, 2.2vw, 27px);
           font-weight: 400;
           line-height: 1.45;
@@ -96,7 +96,7 @@ export default function DiningSection() {
           padding: 12px 0;
           border-bottom: 1px solid rgba(198, 164, 91, 0.65);
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.13em;
           line-height: 1.8;
@@ -187,7 +187,7 @@ export default function DiningSection() {
 
           .zm-dining-eyebrow {
             margin-bottom: 15px;
-            font-size: 9px;
+            font-size: 11px;
             letter-spacing: 0.19em;
           }
 

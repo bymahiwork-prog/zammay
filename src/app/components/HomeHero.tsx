@@ -1,6 +1,5 @@
 
-const heroImage =
-  "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=85";
+const heroImage = "/experience-interior.jpg";
 
 export default function HomeHero() {
   return (
@@ -32,7 +31,7 @@ export default function HomeHero() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "#E8E0D0",
-        padding: "clamp(100px, 12vw, 160px) clamp(24px, 7vw, 110px) 125px",
+        padding: "clamp(100px, 12vw, 160px) clamp(24px, 7vw, 110px) 145px",
         boxSizing: "border-box",
       }}
     >
@@ -48,7 +47,7 @@ export default function HomeHero() {
         <p
           style={{
             color: "#C6A45B",
-            fontSize: "10px",
+            fontSize: "11px",
             letterSpacing: "0.24em",
             textTransform: "uppercase",
             margin: "0 0 24px",
@@ -146,7 +145,7 @@ export default function HomeHero() {
               background: "#C6A45B",
               color: "#080A08",
               textDecoration: "none",
-              fontSize: "10px",
+              fontSize: "11px",
               fontWeight: 600,
               letterSpacing: "0.12em",
               textTransform: "uppercase",
@@ -165,7 +164,7 @@ export default function HomeHero() {
               minHeight: "44px",
               color: "#E8E0D0",
               textDecoration: "none",
-              fontSize: "10px",
+              fontSize: "11px",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
             }}
@@ -181,13 +180,13 @@ export default function HomeHero() {
           zIndex: 1,
           left: "clamp(24px, 7vw, 110px)",
           right: "clamp(24px, 7vw, 110px)",
-          bottom: "24px",
+          bottom: "44px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           gap: "16px",
           color: "rgba(232, 224, 208, 0.76)",
-          fontSize: "9px",
+          fontSize: "11px",
           letterSpacing: "0.13em",
           lineHeight: 1.8,
         }}
@@ -207,6 +206,15 @@ export default function HomeHero() {
       </div>
 
       <style>{`
+        #home::before {
+          content: "";
+          position: absolute;
+          inset: clamp(12px, 1.6vw, 22px);
+          z-index: 0;
+          pointer-events: none;
+          border: 1px solid rgba(198, 164, 91, 0.28);
+        }
+
         @media (max-width: 600px) {
           #home {
             min-height: 720px !important;
@@ -233,8 +241,8 @@ export default function HomeHero() {
           #home > div:last-child {
             left: 24px !important;
             right: 24px !important;
-            bottom: 18px !important;
-            font-size: 8px !important;
+            bottom: 30px !important;
+            font-size: 10px !important;
           }
 
           #home > div:last-child span {

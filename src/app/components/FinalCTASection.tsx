@@ -118,7 +118,7 @@ export default function FinalCTASection() {
         .zm-final-cta-eyebrow {
           margin: 0 0 20px;
           color: #c6a45b;
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 11px;
           font-weight: 600;
           letter-spacing: 4px;
@@ -128,7 +128,7 @@ export default function FinalCTASection() {
         .zm-final-cta h2 {
           margin: 0;
           color: #e8e0d0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(44px, 6.5vw, 76px);
           font-weight: 400;
           letter-spacing: -1px;
@@ -144,7 +144,7 @@ export default function FinalCTASection() {
           max-width: 610px;
           margin: 24px auto 0;
           color: rgba(232, 224, 208, 0.75);
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 14px;
           line-height: 2;
         }
@@ -167,7 +167,7 @@ export default function FinalCTASection() {
           padding: 14px 24px;
           border: 1px solid #c6a45b;
           border-radius: 0;
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 12px;
           font-weight: 600;
           letter-spacing: 0.6px;
@@ -208,7 +208,7 @@ export default function FinalCTASection() {
         .zm-final-cta-location {
           margin: 32px 0 0;
           color: rgba(232, 224, 208, 0.55);
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 11px;
           letter-spacing: 0.8px;
           line-height: 1.8;
@@ -221,7 +221,7 @@ export default function FinalCTASection() {
 
           .zm-final-cta-eyebrow {
             margin-bottom: 17px;
-            font-size: 10px;
+            font-size: 11px;
             letter-spacing: 3px;
           }
 
@@ -250,7 +250,7 @@ export default function FinalCTASection() {
 
           .zm-final-cta-location {
             margin-top: 26px;
-            font-size: 10px;
+            font-size: 11px;
           }
         }
 

@@ -59,7 +59,7 @@ export default function MovingTicker() {
           gap: 30px;
           padding-left: 30px;
           color: #e8e0d0;
-          font-family: Arial, Helvetica, sans-serif;
+          font-family: var(--font-sans), Arial, sans-serif;
           font-size: 11px;
           font-weight: 600;
           letter-spacing: 2.2px;
@@ -106,7 +106,7 @@ export default function MovingTicker() {
           .zm-ticker-item {
             gap: 20px;
             padding-left: 20px;
-            font-size: 10px;
+            font-size: 11px;
             letter-spacing: 1.6px;
           }
         }

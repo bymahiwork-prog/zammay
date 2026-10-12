@@ -68,8 +68,8 @@ export default function Navbar() {
         .zm-desktop-nav a {
           color: #e8e0d0;
           text-decoration: none;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 10px;
+          font-family: var(--font-sans), Arial, sans-serif;
+          font-size: 11px;
           font-weight: 500;
           letter-spacing: 0.11em;
           white-space: nowrap;
@@ -90,8 +90,8 @@ export default function Navbar() {
           color: #080a08;
           border: 1px solid #c6a45b;
           text-decoration: none;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 9px;
+          font-family: var(--font-sans), Arial, sans-serif;
+          font-size: 11px;
           font-weight: 700;
           letter-spacing: 0.1em;
           white-space: nowrap;
@@ -140,14 +140,14 @@ export default function Navbar() {
           }
 
           .zm-desktop-nav a {
-            font-size: 8px;
+            font-size: 11px;
             letter-spacing: 0.06em;
           }
 
           .zm-reserve {
             min-height: 40px;
             padding: 0 12px;
-            font-size: 8px;
+            font-size: 11px;
           }
         }
 

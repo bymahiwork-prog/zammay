@@ -54,7 +54,7 @@ export default function ExperienceSection() {
           left: 24px;
           right: 18px;
           color: #E8E0D0;
-          font-size: 9px;
+          font-size: 11px;
           letter-spacing: 0.2em;
           line-height: 1.8;
         }
@@ -68,7 +68,7 @@ export default function ExperienceSection() {
         .zm-experience-label {
           margin: 0 0 20px;
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.24em;
           line-height: 1.8;
@@ -77,7 +77,7 @@ export default function ExperienceSection() {
         .zm-experience-heading {
           margin: 0;
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: clamp(42px, 5vw, 68px);
           font-weight: 400;
           line-height: 1.02;
@@ -105,7 +105,7 @@ export default function ExperienceSection() {
 
         .zm-experience-description:first-of-type {
           color: #E8E0D0;
-          font-family: "Cormorant Garamond", Georgia, serif;
+          font-family: var(--font-cormorant), Georgia, serif;
           font-size: 22px;
           line-height: 1.6;
         }
@@ -118,7 +118,7 @@ export default function ExperienceSection() {
           padding: 12px 0;
           border-bottom: 1px solid rgba(198, 164, 91, 0.65);
           color: #C6A45B;
-          font-size: 10px;
+          font-size: 11px;
           font-weight: 600;
           letter-spacing: 0.13em;
           line-height: 1.8;
@@ -168,12 +168,12 @@ export default function ExperienceSection() {
           .zm-experience-caption {
             left: 18px;
             bottom: 18px;
-            font-size: 8px;
+            font-size: 11px;
           }
 
           .zm-experience-label {
             margin-bottom: 15px;
-            font-size: 9px;
+            font-size: 11px;
             letter-spacing: 0.19em;
           }
 
