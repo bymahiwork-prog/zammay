@@ -22,10 +22,10 @@ export default function Navbar() {
           position: relative;
           z-index: 1000;
           width: 100%;
-          min-height: 76px;
-          padding: 12px clamp(20px, 5vw, 72px);
+          min-height: 96px;
+          padding: 14px clamp(20px, 5vw, 72px);
           display: grid;
-          grid-template-columns: 150px minmax(0, 1fr) auto;
+          grid-template-columns: 180px minmax(0, 1fr) auto;
           align-items: center;
           gap: 28px;
           background: #080a08;
@@ -50,9 +50,9 @@ export default function Navbar() {
 
         .zm-logo {
           display: block;
-          width: 112px;
+          width: 74px;
           max-width: 100%;
-          height: 44px;
+          height: 66px;
           object-fit: contain;
           object-position: left center;
         }
@@ -61,7 +61,7 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: clamp(14px, 2.2vw, 32px);
+          gap: clamp(18px, 2.6vw, 40px);
           min-width: 0;
         }
 
@@ -69,9 +69,9 @@ export default function Navbar() {
           color: #e8e0d0;
           text-decoration: none;
           font-family: var(--font-sans), Arial, sans-serif;
-          font-size: 11px;
+          font-size: 13px;
           font-weight: 500;
-          letter-spacing: 0.11em;
+          letter-spacing: 0.16em;
           white-space: nowrap;
           transition: color 180ms ease;
         }
@@ -82,16 +82,16 @@ export default function Navbar() {
 
         .zm-reserve {
           display: inline-flex;
-          min-height: 44px;
+          min-height: 50px;
           align-items: center;
           justify-content: center;
-          padding: 0 20px;
+          padding: 0 28px;
           background: #c6a45b;
           color: #080a08;
           border: 1px solid #c6a45b;
           text-decoration: none;
           font-family: var(--font-sans), Arial, sans-serif;
-          font-size: 11px;
+          font-size: 12px;
           font-weight: 700;
           letter-spacing: 0.1em;
           white-space: nowrap;
@@ -108,7 +108,7 @@ export default function Navbar() {
           align-items: center;
           justify-content: center;
           width: 42px;
-          height: 42px;
+          height: 46px;
           padding: 0;
           background: transparent;
           border: 1px solid rgba(198, 164, 91, 0.35);
@@ -125,14 +125,15 @@ export default function Navbar() {
 
         @media (max-width: 900px) {
           .zm-navbar {
-            grid-template-columns: 105px minmax(0, 1fr) auto;
+            grid-template-columns: 120px minmax(0, 1fr) auto;
             gap: 14px;
             padding-left: 22px;
             padding-right: 22px;
           }
 
           .zm-logo {
-            width: 94px;
+            width: 62px;
+            height: 56px;
           }
 
           .zm-desktop-nav {
@@ -145,23 +146,23 @@ export default function Navbar() {
           }
 
           .zm-reserve {
-            min-height: 40px;
-            padding: 0 12px;
+            min-height: 44px;
+            padding: 0 16px;
             font-size: 11px;
           }
         }
 
         @media (max-width: 680px) {
           .zm-navbar {
-            min-height: 68px;
+            min-height: 78px;
             grid-template-columns: minmax(0, 1fr) auto;
             gap: 12px;
-            padding: 10px 20px;
+            padding: 12px 20px;
           }
 
           .zm-logo {
-            width: 100px;
-            height: 42px;
+            width: 60px;
+            height: 54px;
           }
 
           .zm-desktop-nav {
@@ -188,7 +189,7 @@ export default function Navbar() {
             display: block;
             padding: 15px 0;
             border-bottom: 1px solid rgba(198, 164, 91, 0.12);
-            font-size: 11px;
+            font-size: 14px;
             letter-spacing: 0.12em;
           }
 
@@ -221,7 +222,7 @@ export default function Navbar() {
         onClick={() => setMenuOpen(false)}
       >
         <img
-          src="/logo-zammay.jpg"
+          src="/logo-zammaya-nav.png"
           alt="Zammaya"
           className="zm-logo"
         />
