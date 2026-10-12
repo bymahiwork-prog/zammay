@@ -123,36 +123,30 @@ export default function Navbar() {
           outline-offset: 4px;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1280px) {
           .zm-navbar {
             grid-template-columns: 120px minmax(0, 1fr) auto;
-            gap: 14px;
-            padding-left: 22px;
-            padding-right: 22px;
-          }
-
-          .zm-logo {
-            width: 62px;
-            height: 56px;
+            gap: 20px;
+            padding-left: 32px;
+            padding-right: 32px;
           }
 
           .zm-desktop-nav {
-            gap: 12px;
+            gap: 22px;
           }
 
           .zm-desktop-nav a {
-            font-size: 11px;
-            letter-spacing: 0.06em;
+            font-size: 12px;
+            letter-spacing: 0.12em;
           }
 
           .zm-reserve {
-            min-height: 44px;
-            padding: 0 16px;
+            padding: 0 20px;
             font-size: 11px;
           }
         }
 
-        @media (max-width: 680px) {
+        @media (max-width: 1100px) {
           .zm-navbar {
             min-height: 78px;
             grid-template-columns: minmax(0, 1fr) auto;
