@@ -10,7 +10,7 @@ export default function LocationSection() {
           gap: clamp(36px, 6vw, 88px);
           width: 100%;
           box-sizing: border-box;
-          padding: clamp(64px, 9vw, 120px) clamp(24px, 7vw, 110px);
+          padding: clamp(40px, 5vw, 64px) clamp(24px, 7vw, 110px);
           background: #101B14;
           color: #E8E0D0;
           overflow: hidden;
@@ -178,8 +178,8 @@ export default function LocationSection() {
           .zm-location-section {
             grid-template-columns: 1fr;
             gap: 34px;
-            padding-top: 72px;
-            padding-bottom: 76px;
+            padding-top: 48px;
+            padding-bottom: 48px;
           }
 
           .zm-location-content {

@@ -23,7 +23,7 @@ export default function CocktailsSection() {
           gap: clamp(30px, 5vw, 76px);
           width: 100%;
           box-sizing: border-box;
-          padding: clamp(60px, 8vw, 112px) clamp(24px, 5vw, 80px);
+          padding: clamp(40px, 5vw, 64px) clamp(24px, 5vw, 80px);
           overflow: hidden;
           background: #080A08;
           color: #E8E0D0;
@@ -139,8 +139,8 @@ export default function CocktailsSection() {
           .zm-cocktails-section {
             grid-template-columns: 1fr;
             gap: 30px;
-            padding-top: 64px;
-            padding-bottom: 64px;
+            padding-top: 48px;
+            padding-bottom: 48px;
           }
 
           .zm-cocktails-content {

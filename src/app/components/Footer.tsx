@@ -105,7 +105,7 @@ export default function Footer() {
       <style>{`
         .zm-footer {
           width: 100%;
-          padding: 76px 24px 24px;
+          padding: 56px 24px 24px;
           background: #080a08;
           color: #e8e0d0;
           border-top: 1px solid rgba(198, 164, 91, 0.35);

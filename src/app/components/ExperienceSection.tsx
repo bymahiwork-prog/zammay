@@ -9,7 +9,7 @@ export default function ExperienceSection() {
         gridTemplateColumns: "minmax(0, 1fr) minmax(0, 0.9fr)",
         alignItems: "center",
         gap: "clamp(36px, 7vw, 100px)",
-        padding: "clamp(64px, 9vw, 130px) clamp(24px, 7vw, 110px)",
+        padding: "clamp(40px, 5vw, 64px) clamp(24px, 7vw, 110px)",
         background: "#080A08",
         color: "#E8E0D0",
         boxSizing: "border-box",
@@ -138,8 +138,8 @@ export default function ExperienceSection() {
           .zm-experience-section {
             grid-template-columns: 1fr !important;
             gap: 36px !important;
-            padding-top: 70px !important;
-            padding-bottom: 76px !important;
+            padding-top: 48px !important;
+            padding-bottom: 48px !important;
           }
 
           .zm-experience-visual {

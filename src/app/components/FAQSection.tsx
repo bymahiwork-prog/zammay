@@ -92,7 +92,7 @@ export default function FAQSection() {
         .zm-faq-section {
           position: relative;
           width: 100%;
-          padding: 100px 24px 110px;
+          padding: 64px 24px 68px;
           background: #101b14;
           color: #e8e0d0;
           overflow: hidden;
@@ -236,7 +236,7 @@ export default function FAQSection() {
 
         @media (max-width: 600px) {
           .zm-faq-section {
-            padding: 70px 20px 76px;
+            padding: 48px 20px 52px;
           }
 
           .zm-faq-heading {

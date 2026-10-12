@@ -25,7 +25,7 @@ export default function Escape() {
         .zm-escape-section {
           width: 100%;
           box-sizing: border-box;
-          padding: clamp(64px, 8vw, 110px) clamp(24px, 7vw, 110px);
+          padding: clamp(40px, 5vw, 64px) clamp(24px, 7vw, 110px);
           background: #101B14;
           color: #E8E0D0;
           overflow: hidden;

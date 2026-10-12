@@ -69,7 +69,7 @@ export default function FinalCTASection() {
           isolation: isolate;
           width: 100%;
           overflow: hidden;
-          padding: 110px 24px 100px;
+          padding: 72px 24px 64px;
           background:
             radial-gradient(
               ellipse at 50% 0%,
@@ -216,7 +216,7 @@ export default function FinalCTASection() {
 
         @media (max-width: 600px) {
           .zm-final-cta {
-            padding: 78px 20px 72px;
+            padding: 52px 20px 48px;
           }
 
           .zm-final-cta-eyebrow {

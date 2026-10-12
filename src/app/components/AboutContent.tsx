@@ -178,8 +178,8 @@ export default function AboutContent() {
 
         /* Hero */
         .zm-about-hero {
-          padding-top: clamp(72px, 10vw, 130px);
-          padding-bottom: clamp(72px, 9vw, 110px);
+          padding-top: clamp(48px, 6vw, 84px);
+          padding-bottom: clamp(64px, 6vw, 80px);
           display: grid;
           grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
           gap: clamp(40px, 6vw, 80px);
@@ -241,7 +241,7 @@ export default function AboutContent() {
         .zm-about-intro {
           max-width: 980px;
           margin: 0 auto;
-          padding: clamp(80px, 9vw, 110px) clamp(24px, 6vw, 72px);
+          padding: clamp(40px, 5vw, 64px) clamp(24px, 6vw, 72px);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -267,11 +267,11 @@ export default function AboutContent() {
         }
 
         .zm-about-band > .zm-about-wrap {
-          padding-top: clamp(80px, 9vw, 120px);
-          padding-bottom: clamp(80px, 9vw, 120px);
+          padding-top: clamp(40px, 5vw, 64px);
+          padding-bottom: clamp(40px, 5vw, 64px);
           display: flex;
           flex-direction: column;
-          gap: 52px;
+          gap: 40px;
         }
 
         .zm-about-head {
@@ -321,8 +321,8 @@ export default function AboutContent() {
 
         /* Split sections */
         .zm-about-split {
-          padding-top: clamp(80px, 10vw, 128px);
-          padding-bottom: clamp(80px, 10vw, 128px);
+          padding-top: clamp(40px, 5vw, 64px);
+          padding-bottom: clamp(40px, 5vw, 64px);
           display: grid;
           grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
           gap: clamp(40px, 6vw, 72px);
@@ -361,8 +361,8 @@ export default function AboutContent() {
         }
 
         .zm-about-occasions > .zm-about-wrap {
-          padding-top: clamp(80px, 9vw, 120px);
-          padding-bottom: clamp(80px, 9vw, 120px);
+          padding-top: clamp(40px, 5vw, 64px);
+          padding-bottom: clamp(40px, 5vw, 64px);
           display: grid;
           grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
           gap: clamp(40px, 6vw, 72px);
@@ -428,7 +428,7 @@ export default function AboutContent() {
           position: relative;
           max-width: 960px;
           margin: 0 auto;
-          padding: clamp(100px, 12vw, 150px) clamp(24px, 6vw, 72px);
+          padding: clamp(64px, 8vw, 100px) clamp(24px, 6vw, 72px);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -472,7 +472,7 @@ export default function AboutContent() {
           }
 
           .zm-about-hero {
-            padding-bottom: 96px;
+            padding-bottom: 72px;
           }
 
           .zm-about-split--reverse .zm-about-photos {
