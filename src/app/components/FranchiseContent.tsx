@@ -4,50 +4,8 @@ import { useState, type FormEvent } from "react";
 
 const WHATSAPP_NUMBER = "919289895632";
 
-const pillars = [
-  {
-    title: "Signature Ambience",
-    text: "Chandeliers, carved stone and lush greens — an interior guests photograph, share and come back for.",
-  },
-  {
-    title: "Food & Cocktail Programme",
-    text: "Globally inspired plates made for sharing, and a bar built around signature creations and premium pours.",
-  },
-  {
-    title: "A Full-Evening Venue",
-    text: "Dinner, drinks, music and celebrations under one roof — a format that works from early evening to late night.",
-  },
-  {
-    title: "A Brand With a Story",
-    text: "Zammaya means “promise” — a clear, premium identity that travels well to new cities.",
-  },
-];
 
-const partnerTraits = [
-  "Experience in hospitality, F&B or running a business",
-  "Access to a premium location in a growing city",
-  "Capacity to invest in a high-quality lounge and dining build",
-  "Commitment to Zammaya’s standards of food, service and ambience",
-];
 
-const steps = [
-  {
-    title: "Enquire",
-    text: "Share your details and preferred city using the form below.",
-  },
-  {
-    title: "Introductory Call",
-    text: "Our team gets in touch to understand you and your plans.",
-  },
-  {
-    title: "Location & Fit",
-    text: "We review the city, the site and the partnership together.",
-  },
-  {
-    title: "Agreement & Launch",
-    text: "Once aligned, we plan the build and the opening night.",
-  },
-];
 
 const faqs = [
   {
@@ -178,14 +136,6 @@ export default function FranchiseContent() {
           line-height: 1.8;
         }
 
-        .zm-fr-head {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          max-width: 720px;
-          margin-bottom: 40px;
-        }
-
         .zm-fr-btn {
           display: inline-flex;
           align-items: center;
@@ -299,108 +249,10 @@ export default function FranchiseContent() {
           text-transform: uppercase;
         }
 
-        /* Pillars */
-        .zm-fr-pillars {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          gap: 1px;
-          background: rgba(198, 164, 91, 0.25);
-          border: 1px solid rgba(198, 164, 91, 0.25);
-        }
-
-        .zm-fr-pillars li {
-          display: flex;
-          flex-direction: column;
-          gap: 14px;
-          padding: 36px 30px;
-          background: #080a08;
-        }
-
-        .zm-fr-num {
-          color: #c6a45b;
-          font-family: var(--font-cormorant), Georgia, serif;
-          font-size: 34px;
-          line-height: 1;
-        }
-
-        .zm-fr-pillars p {
-          margin: 0;
-          color: rgba(232, 224, 208, 0.72);
-          font-size: 14px;
-          line-height: 1.75;
-        }
-
-        /* Partner + steps */
         .zm-fr-band {
           background: #101b14;
           border-top: 1px solid rgba(198, 164, 91, 0.15);
           border-bottom: 1px solid rgba(198, 164, 91, 0.15);
-        }
-
-        .zm-fr-split {
-          display: grid;
-          grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-          gap: clamp(40px, 6vw, 80px);
-        }
-
-        .zm-fr-traits {
-          margin: 24px 0 0;
-          padding: 0;
-          list-style: none;
-        }
-
-        .zm-fr-traits li {
-          display: flex;
-          gap: 16px;
-          padding: 16px 0;
-          border-bottom: 1px solid rgba(198, 164, 91, 0.2);
-          font-size: 16px;
-          line-height: 1.6;
-        }
-
-        .zm-fr-traits li::before {
-          content: "";
-          flex: 0 0 auto;
-          width: 7px;
-          height: 7px;
-          margin-top: 9px;
-          transform: rotate(45deg);
-          background: #c6a45b;
-        }
-
-        .zm-fr-steps {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 16px;
-        }
-
-        .zm-fr-steps li {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          padding: 28px 26px;
-          border: 1px solid rgba(198, 164, 91, 0.25);
-          background: rgba(8, 10, 8, 0.4);
-        }
-
-        .zm-fr-steps p {
-          margin: 0;
-          color: rgba(232, 224, 208, 0.72);
-          font-size: 14px;
-          line-height: 1.7;
-        }
-
-        .zm-fr-step-label {
-          color: #c6a45b;
-          font-size: 11px;
-          letter-spacing: 0.26em;
-          text-transform: uppercase;
         }
 
         /* Enquiry */
@@ -570,22 +422,13 @@ export default function FranchiseContent() {
           line-height: 1.8;
         }
 
-        @media (max-width: 1000px) {
-          .zm-fr-pillars {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-        }
-
         @media (max-width: 860px) {
-          .zm-fr-split,
           .zm-fr-enquiry {
             grid-template-columns: minmax(0, 1fr);
           }
         }
 
         @media (max-width: 560px) {
-          .zm-fr-pillars,
-          .zm-fr-steps,
           .zm-fr-row {
             grid-template-columns: minmax(0, 1fr);
           }
@@ -623,65 +466,6 @@ export default function FranchiseContent() {
           <a href="#enquiry" className="zm-fr-btn">
             Enquire About a Franchise <span aria-hidden="true">→</span>
           </a>
-        </div>
-      </section>
-
-      {/* Concept */}
-      <section className="zm-fr-wrap zm-fr-section" aria-labelledby="franchise-concept-heading">
-        <div className="zm-fr-head">
-          <p className="zm-fr-eyebrow">Why Partner With Zammaya</p>
-          <h2 id="franchise-concept-heading">
-            A Concept Built to <em>Rule the Era</em>
-          </h2>
-          <p className="zm-fr-body">
-            Zammaya brings together food, drinks, design and energy into one
-            premium night out — the kind of venue a city remembers.
-          </p>
-        </div>
-
-        <ul className="zm-fr-pillars">
-          {pillars.map((p, i) => (
-            <li key={p.title}>
-              <span className="zm-fr-num" aria-hidden="true">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3>{p.title}</h3>
-              <p>{p.text}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Ideal partner + process */}
-      <section className="zm-fr-band" aria-labelledby="franchise-partner-heading">
-        <div className="zm-fr-wrap zm-fr-section zm-fr-split">
-          <div>
-            <p className="zm-fr-eyebrow">The Ideal Partner</p>
-            <h2 id="franchise-partner-heading" style={{ marginTop: 16 }}>
-              Who We’re <em>Looking For</em>
-            </h2>
-            <ul className="zm-fr-traits">
-              {partnerTraits.map((t) => (
-                <li key={t}>{t}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <p className="zm-fr-eyebrow">The Process</p>
-            <h2 style={{ marginTop: 16, marginBottom: 24 }}>
-              From Enquiry to <em>Opening Night</em>
-            </h2>
-            <ol className="zm-fr-steps">
-              {steps.map((s, i) => (
-                <li key={s.title}>
-                  <span className="zm-fr-step-label">Step {i + 1}</span>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
         </div>
       </section>
 
