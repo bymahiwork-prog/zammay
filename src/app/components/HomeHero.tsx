@@ -134,7 +134,7 @@ export default function HomeHero() {
           }}
         >
           <a
-            href="#reservation"
+            href="/contact#reservation"
             aria-label="Reserve your table at Zammaya"
             style={{
               display: "inline-flex",

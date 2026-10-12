@@ -320,7 +320,7 @@ export default function LocationSection() {
             </a>
 
             <a
-              href="#reservation"
+              href="/contact#reservation"
               className="zm-location-button-secondary"
             >
               RESERVE A TABLE

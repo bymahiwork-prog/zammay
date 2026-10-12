@@ -302,7 +302,7 @@ export default function OccasionsSection() {
           </ul>
 
           <a
-            href="#reservation"
+            href="/contact#reservation"
             className="zm-occasions-button"
           >
             PLAN YOUR CELEBRATION

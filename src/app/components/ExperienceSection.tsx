@@ -260,7 +260,7 @@ export default function ExperienceSection() {
           </p>
 
           <a
-            href="#reservation"
+            href="/contact#reservation"
             className="zm-experience-link"
             aria-label="Book your experience at Zammaya"
           >

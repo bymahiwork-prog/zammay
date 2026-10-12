@@ -32,7 +32,7 @@ export default function FinalCTASection() {
 
           <div className="zm-final-cta-actions">
             <a
-              href="#reservation"
+              href="/contact#reservation"
               className="zm-final-cta-button zm-final-cta-primary"
             >
               Reserve Your Table

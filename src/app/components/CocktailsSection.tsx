@@ -249,7 +249,7 @@ export default function CocktailsSection() {
             in South Delhi made for people who enjoy the details.
           </p>
 
-          <a href="#reservation" className="zm-cocktails-button">
+          <a href="/contact#reservation" className="zm-cocktails-button">
             DISCOVER OUR COCKTAILS <span>↗</span>
           </a>
         </div>

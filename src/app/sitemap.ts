@@ -5,7 +5,7 @@ import { posts } from "./blog/posts";
 const BASE = "https://zammaya.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "/about", "/gallery", "/franchise", "/blog"].map(
+  const pages = ["", "/about", "/gallery", "/franchise", "/blog", "/contact"].map(
     (path) => ({
       url: `${BASE}${path}`,
       changeFrequency: "monthly" as const,

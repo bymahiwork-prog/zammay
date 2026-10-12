@@ -84,7 +84,7 @@ export default function Footer() {
                 something to remember.
               </p>
 
-              <a href="#reservation" className="zm-footer-reserve-button">
+              <a href="/contact#reservation" className="zm-footer-reserve-button">
                 Reserve Your Table <span aria-hidden="true">↗</span>
               </a>
             </div>
