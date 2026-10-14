@@ -259,6 +259,50 @@ export default function AboutContent() {
           max-width: 740px;
         }
 
+        /* Founder */
+        .zm-about-founder {
+          padding-top: clamp(24px, 3vw, 40px);
+          padding-bottom: clamp(56px, 6vw, 80px);
+          display: grid;
+          grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+          gap: clamp(40px, 6vw, 80px);
+          align-items: center;
+        }
+
+        .zm-about-founder-visual {
+          position: relative;
+          isolation: isolate;
+          width: 100%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+
+        .zm-about-founder-visual::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          transform: translate(-16px, 16px);
+          border: 1px solid rgba(198, 164, 91, 0.45);
+          pointer-events: none;
+        }
+
+        .zm-about-founder-visual img {
+          display: block;
+          width: 100%;
+          aspect-ratio: 4 / 5;
+          object-fit: cover;
+          object-position: center 30%;
+        }
+
+        .zm-about-founder-role {
+          margin: -6px 0 0;
+          color: rgba(232, 224, 208, 0.6);
+          font-size: 11px;
+          letter-spacing: 0.24em;
+          text-transform: uppercase;
+        }
+
         /* Experience grid */
         .zm-about-band {
           background: #101b14;
@@ -456,6 +500,7 @@ export default function AboutContent() {
 
         @media (max-width: 900px) {
           .zm-about-hero,
+          .zm-about-founder,
           .zm-about-split,
           .zm-about-occasions > .zm-about-wrap {
             grid-template-columns: minmax(0, 1fr);
@@ -548,6 +593,33 @@ export default function AboutContent() {
           raise a toast over signature drinks, celebrate with your people, or
           let the evening unfold exactly as it should.
         </p>
+      </section>
+
+      {/* Founder */}
+      <section
+        className="zm-about-wrap zm-about-founder"
+        aria-labelledby="about-founder-heading"
+      >
+        <div className="zm-about-founder-visual">
+          <img
+            src="/founder-manish-sharma.jpg"
+            alt="Manish Sharma, founder of Zammaya"
+          />
+        </div>
+
+        <div className="zm-about-split-copy">
+          <p className="zm-about-eyebrow">The Founder</p>
+          <h2 id="about-founder-heading" className="zm-about-h2">
+            Meet <em>Manish Sharma</em>
+          </h2>
+          <p className="zm-about-founder-role">Founder, Zammaya</p>
+          {/* Replace with the founder's own story once the brand shares it. */}
+          <p className="zm-about-body">
+            Zammaya is the vision of founder Manish Sharma — a promise of bold
+            flavours, crafted cocktails, immersive ambience and evenings that
+            stay with you long after the last toast.
+          </p>
+        </div>
       </section>
 
       {/* Experience */}
